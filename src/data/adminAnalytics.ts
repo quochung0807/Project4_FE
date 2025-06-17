@@ -15,7 +15,7 @@ export interface AnalyticsData {
 }
 
 export const fetchAdminAnalytics = async (accessToken: string | null): Promise<AnalyticsData> => {
-  const BASE_URL = "http://localhost:8000/api";
+  const BASE_URL = "http://https://electrostore-ofl1.onrender.com/api";
 
   const endpoints = {
     keyMetrics: `${BASE_URL}/admin/analytics/key-metrics/`,

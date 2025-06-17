@@ -28,7 +28,7 @@ const ProductDetail = () => {
     const fetchProduct = async () => {
     setIsLoading(true);
       try {
-        const response = await fetch(`http://localhost:8000/api/products/slug/${slug}`, {
+        const response = await fetch(`http://https://electrostore-ofl1.onrender.com/api/products/slug/${slug}`, {
           headers: {
             'Authorization': `Bearer ${accessToken}`
           }
@@ -59,7 +59,7 @@ const ProductDetail = () => {
       const fetchReviews = async () => {
         setIsLoadingReviews(true);
         try {
-          const res = await fetch(`http://localhost:8000/api/reviews/product/${product.id}/`);
+          const res = await fetch(`http://https://electrostore-ofl1.onrender.com/api/reviews/product/${product.id}/`);
           if (!res.ok) throw new Error('Không thể tải đánh giá');
           const data = await res.json();
           // Map lại key cho đúng FE (created_at -> createdAt)

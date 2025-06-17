@@ -53,7 +53,7 @@ const Home = () => {
         if (accessToken) {
           headers["Authorization"] = `Bearer ${accessToken}`;
         }
-        const res = await fetch("http://localhost:8000/api/products/?is_featured=true&limit=10", { headers });
+        const res = await fetch("http://https://electrostore-ofl1.onrender.com/api/products/?is_featured=true&limit=10", { headers });
         const data = await res.json();
         setFeaturedProducts(data.results || data);
       } catch (error) {

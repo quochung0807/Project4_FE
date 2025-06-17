@@ -54,7 +54,7 @@ const ReviewForm = ({ product, onReviewSubmitted }: ReviewFormProps) => {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch('http://localhost:8000/api/reviews/', {
+      const res = await fetch('http://https://electrostore-ofl1.onrender.com/api/reviews/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

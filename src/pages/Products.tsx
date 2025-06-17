@@ -61,7 +61,7 @@ const Products = () => {
   useEffect(() => {
     const fetchAllReviews = async () => {
       try {
-        const res = await fetch('http://localhost:8000/api/reviews/product/');
+        const res = await fetch('http://https://electrostore-ofl1.onrender.com/api/reviews/product/');
         if (!res.ok) return;
         const data = await res.json();
         // Convert array to object: { [product_id]: { avgRating, reviewCount } }

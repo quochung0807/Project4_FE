@@ -37,7 +37,7 @@ const AdminReviews = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await fetch('http://localhost:8000/api/reviews/', {
+        const res = await fetch('http://https://electrostore-ofl1.onrender.com/api/reviews/', {
           headers: {
             Authorization: `Bearer ${accessToken}`,
             Accept: 'application/json',
@@ -59,7 +59,7 @@ const AdminReviews = () => {
     if (!window.confirm('Bạn có chắc chắn muốn xóa đánh giá này?')) return;
 
     try {
-      const res = await fetch(`http://localhost:8000/api/reviews/${id}/`, {
+      const res = await fetch(`http://https://electrostore-ofl1.onrender.com/api/reviews/${id}/`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${accessToken}`,
