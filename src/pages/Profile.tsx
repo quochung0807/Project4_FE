@@ -37,7 +37,7 @@ const Profile = () => {
       setErrorProfile('');
       try {
         const accessToken = localStorage.getItem('accessToken');
-        const res = await fetch('http://https://electrostore-ofl1.onrender.com/api/profile/me/', {
+        const res = await fetch('https://electrostore-ofl1.onrender.com/api/profile/me/', {
           headers: {
             'Authorization': `Bearer ${accessToken}`
           }
@@ -66,7 +66,7 @@ const Profile = () => {
       setErrorOrders('');
       try {
         const accessToken = localStorage.getItem('accessToken');
-        const res = await fetch('http://https://electrostore-ofl1.onrender.com/api/orders/me/', {
+        const res = await fetch('https://electrostore-ofl1.onrender.com/api/orders/me/', {
           headers: {
             'Authorization': `Bearer ${accessToken}`
           }
@@ -103,7 +103,7 @@ const Profile = () => {
   const handleSave = async () => {
     try {
       const accessToken = localStorage.getItem('accessToken');
-      const res = await fetch('http://https://electrostore-ofl1.onrender.com/api/profile/me/', {
+      const res = await fetch('https://electrostore-ofl1.onrender.com/api/profile/me/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -206,7 +206,7 @@ const Profile = () => {
     setIsChangingPassword(true);
     try {
       const accessToken = localStorage.getItem('accessToken');
-      const res = await fetch('http://https://electrostore-ofl1.onrender.com/api/profile/me/change-password/', {
+      const res = await fetch('https://electrostore-ofl1.onrender.com/api/profile/me/change-password/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

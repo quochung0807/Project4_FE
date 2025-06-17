@@ -72,7 +72,7 @@ const Checkout = () => {
     setIsLoading(true);
     try {
       // 1. Lưu order
-      const res = await fetch('http://https://electrostore-ofl1.onrender.com/api/orders/', {
+      const res = await fetch('https://electrostore-ofl1.onrender.com/api/orders/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -89,7 +89,7 @@ const Checkout = () => {
       }
 
       // 2. Lấy order mới nhất
-      const ordersRes = await fetch('http://https://electrostore-ofl1.onrender.com/api/orders/me/', {
+      const ordersRes = await fetch('https://electrostore-ofl1.onrender.com/api/orders/me/', {
         headers: {
           'Authorization': `Bearer ${accessToken}`
         }
@@ -99,7 +99,7 @@ const Checkout = () => {
 
       // 3. Xác nhận thanh toán
       if (latestOrder && latestOrder.id) {
-        await fetch(`http://https://electrostore-ofl1.onrender.com/api/orders/${latestOrder.id}/confirm_payment/`, {
+        await fetch(`https://electrostore-ofl1.onrender.com/api/orders/${latestOrder.id}/confirm_payment/`, {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${accessToken}`

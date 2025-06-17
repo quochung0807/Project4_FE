@@ -23,7 +23,7 @@ const AdminOrders = () => {
       setError('');
       try {
         const accessToken = localStorage.getItem('accessToken');
-        const res = await axios.get('http://https://electrostore-ofl1.onrender.com/api/orders/', {
+        const res = await axios.get('https://electrostore-ofl1.onrender.com/api/orders/', {
           headers: {
             'Authorization': `Bearer ${accessToken}`
           }
@@ -103,7 +103,7 @@ const AdminOrders = () => {
     try {
       const accessToken = localStorage.getItem('accessToken');
       await axios.patch(
-        `http://https://electrostore-ofl1.onrender.com/api/orders/${orderId}/status/`,
+        `https://electrostore-ofl1.onrender.com/api/orders/${orderId}/status/`,
         { status: newStatus },
         {
           headers: {
@@ -121,7 +121,7 @@ const AdminOrders = () => {
     if (!window.confirm('Bạn có chắc chắn muốn xoá đơn hàng này?')) return;
     try {
       const accessToken = localStorage.getItem('accessToken');
-      await axios.delete(`http://https://electrostore-ofl1.onrender.com/api/orders/${orderId}/`, {
+      await axios.delete(`https://electrostore-ofl1.onrender.com/api/orders/${orderId}/`, {
         headers: {
           'Authorization': `Bearer ${accessToken}`
         }

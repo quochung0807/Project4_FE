@@ -19,7 +19,7 @@ const Cart = () => {
     setIsSyncing(true);
     try {
       for (const item of cart) {
-        const res = await fetch('http://https://electrostore-ofl1.onrender.com/api/cart/', {
+        const res = await fetch('https://electrostore-ofl1.onrender.com/api/cart/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

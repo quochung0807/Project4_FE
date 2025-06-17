@@ -10,7 +10,7 @@ export interface ProductsApiResponse {
 export const fetchProducts = async (
   accessToken: string | null,
 ): Promise<Product[]> => {
-  const url = 'http://https://electrostore-ofl1.onrender.com/api/products/';
+  const url = 'https://electrostore-ofl1.onrender.com/api/products/';
   const headers: HeadersInit = { 'Content-Type': 'application/json' };
   if (accessToken && accessToken !== 'null' && accessToken !== 'undefined') {
     headers['Authorization'] = `Bearer ${accessToken}`;
