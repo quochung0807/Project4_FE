@@ -18,7 +18,7 @@ export const useCategories = (accessToken: string | null) => {
         if (accessToken) {
           headers["Authorization"] = `Bearer ${accessToken}`;
         }
-        const res = await axios.get("http://127.0.0.1:8000/api/categories/", {
+        const res = await axios.get("https://electrostore-ofl1.onrender.com/api/categories/", {
           headers,
         });
         setCategories(res.data.results || res.data);

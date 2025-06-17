@@ -82,7 +82,7 @@ const AdminUsers = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch('http://127.0.0.1:8000/api/profile/', {
+        const res = await fetch('https://electrostore-ofl1.onrender.com/api/profile/', {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -119,7 +119,7 @@ const AdminUsers = () => {
     if (!confirm("Chủ nhân có chắc chắn muốn xoá người dùng này không?")) return;
 
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/profile/${id}/`, {
+      const res = await fetch(`https://electrostore-ofl1.onrender.com/api/profile/${id}/`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ const AdminUsers = () => {
   //   if (!editUser) return;
 
   //   try {
-  //     const res = await fetch(`http://127.0.0.1:8000/api/profile/${editUser.id}/`, {
+  //     const res = await fetch(`https://electrostore-ofl1.onrender.com/api/profile/${editUser.id}/`, {
   //       method: "PUT",
   //       headers: {
   //         "Content-Type": "application/json",
@@ -190,7 +190,7 @@ const AdminUsers = () => {
     if (!editUser) return;
 
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/profile/${editUser.id}/`, {
+      const res = await fetch(`https://electrostore-ofl1.onrender.com/api/profile/${editUser.id}/`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

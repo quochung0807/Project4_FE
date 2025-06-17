@@ -79,7 +79,7 @@ const AdminProducts = () => {
 
   // Fetch danh sách sản phẩm (có phân trang)
   const fetchProducts = async (page = null, pageSizeParam = null) => {
-    let url = 'http://127.0.0.1:8000/api/products/';
+    let url = 'https://electrostore-ofl1.onrender.com/api/products/';
     if (page && pageSizeParam) {
       url += `?page=${page}&page_size=${pageSizeParam}`;
     }
@@ -171,7 +171,7 @@ const AdminProducts = () => {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/products/", {
+      const response = await fetch("https://electrostore-ofl1.onrender.com/api/products/", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -236,7 +236,7 @@ const AdminProducts = () => {
     }
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/products/${editProduct.id}/`, {
+      const response = await fetch(`https://electrostore-ofl1.onrender.com/api/products/${editProduct.id}/`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -271,7 +271,7 @@ const AdminProducts = () => {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/products/${id}/`, {
+      const res = await fetch(`https://electrostore-ofl1.onrender.com/api/products/${id}/`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -373,7 +373,7 @@ const AdminProducts = () => {
       }
 
       try {
-        const res = await fetch('http://127.0.0.1:8000/api/products/', {
+        const res = await fetch('https://electrostore-ofl1.onrender.com/api/products/', {
           method: 'POST',
           headers: { Authorization: `Bearer ${accessToken}` },
           body: formData,

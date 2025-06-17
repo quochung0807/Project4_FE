@@ -46,7 +46,7 @@ export const useOrderStore = create<OrderStore>((set) => ({
   fetchOrders: async () => {
     set({ loading: true });
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/orders/");
+      const res = await fetch("https://electrostore-ofl1.onrender.com/api/orders/");
       const data = await res.json();
       set({ orders: data.results });
     } catch (err) {

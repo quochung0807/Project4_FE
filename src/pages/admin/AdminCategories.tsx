@@ -50,7 +50,7 @@ const AdminCategories = () => {
     const fetchCategories = async () => {
       try {
         if (!accessToken) return;
-        const res = await axios.get('http://127.0.0.1:8000/api/categories/', {
+        const res = await axios.get('https://electrostore-ofl1.onrender.com/api/categories/', {
           headers: { 'accept': 'application/json', 'Authorization': `Bearer ${accessToken}` }
         });
         setCategories(res.data.results);
@@ -66,7 +66,7 @@ const AdminCategories = () => {
   const handleCreateCategory = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/categories/', {
+      const res = await axios.post('https://electrostore-ofl1.onrender.com/api/categories/', {
         name: nameRef.current?.value,
         slug: slugRef.current?.value,
         description: descRef.current?.value
@@ -91,7 +91,7 @@ const AdminCategories = () => {
   const handleUpdateCategory = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://127.0.0.1:8000/api/categories/${editCategory.id}/`, {
+      const res = await axios.put(`https://electrostore-ofl1.onrender.com/api/categories/${editCategory.id}/`, {
         name: editNameRef.current?.value,
         slug: editSlugRef.current?.value,
         description: editDescRef.current?.value
@@ -118,7 +118,7 @@ const AdminCategories = () => {
   const handleDeleteCategory = async (id: number) => {
     if (!confirm('Bạn có chắc muốn xoá danh mục này không?')) return;
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/categories/${id}/`, {
+      await axios.delete(`https://electrostore-ofl1.onrender.com/api/categories/${id}/`, {
         headers: { 'Authorization': `Bearer ${accessToken}` }
       });
       setCategories(prev => prev.filter(c => c.id !== id));
